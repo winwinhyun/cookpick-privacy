@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개인정보처리방침 — 쿡픽</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FDFAF5;
+    --surface: #FFFFFF;
+    --accent: #D4522A;
+    --accent-light: #F5E6DF;
+    --text-primary: #1C1410;
+    --text-secondary: #6B5A50;
+    --text-muted: #A08070;
+    --border: #E8DDD5;
+    --section-bg: #F9F4EE;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  /* Header */
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 24px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #E8834A, var(--accent));
+  }
+
+  .app-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-light);
+    color: var(--accent);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+  }
+
+  .app-badge .dot {
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: var(--text-secondary);
+    font-size: 13px;
+  }
+
+  .effective-date {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border-radius: 4px;
+  }
+
+  /* Main */
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  /* Intro box */
+  .intro-box {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 18px 20px;
+    margin-bottom: 40px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  /* Section */
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-num {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-light);
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+  }
+
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  /* Table */
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin-bottom: 12px;
+  }
+
+  .info-table th {
+    background: var(--section-bg);
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid var(--border);
+    font-size: 13px;
+    white-space: nowrap;
+    width: 130px;
+  }
+
+  .info-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    background: var(--surface);
+  }
+
+  /* List */
+  ul.clean-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+
+  ul.clean-list li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    padding: 6px 0 6px 16px;
+    position: relative;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  ul.clean-list li:last-child { border-bottom: none; }
+
+  ul.clean-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px; height: 5px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* Highlight box */
+  .highlight-box {
+    background: var(--section-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 12px;
+  }
+
+  .highlight-box strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  /* Contact */
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 24px;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+
+  .contact-row:last-child { border-bottom: none; }
+
+  .contact-label {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    min-width: 80px;
+    padding-top: 1px;
+  }
+
+  .contact-value {
+    color: var(--text-secondary);
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 32px 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  footer .app-name {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 21px; }
+    h2 { font-size: 16px; }
+    .info-table th { width: 100px; }
+    main { padding: 28px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="app-badge"><span class="dot"></span>쿡픽 (CookPick)</div>
+  <h1>개인정보처리방침</h1>
+  <p class="subtitle">Privacy Policy</p>
+  <span class="effective-date">시행일: 2025년 1월 1일 &nbsp;|&nbsp; 최종 수정: 2025년 1월 1일</span>
+</header>
+
+<main>
+
+  <div class="intro-box">
+    쿡픽(CookPick, 이하 "서비스")은 이용자의 개인정보를 소중히 여깁니다. 본 방침은 앱 사용 과정에서 수집되는 정보와 그 처리 방법을 투명하게 안내합니다.
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>수집하는 개인정보</h2>
+    </div>
+    <p>서비스 제공에 필요한 최소한의 정보만 수집합니다.</p>
+    <table class="info-table">
+      <tr><th>수집 항목</th><td>앱 사용 기기 정보(OS 버전, 기기 식별자), 앱 내 저장 레시피 데이터, 사용 언어 설정</td></tr>
+      <tr><th>수집 방법</th><td>앱 실행 시 자동 수집, 사용자 직접 입력(레시피 저장·수정)</td></tr>
+      <tr><th>수집 목적</th><td>서비스 정상 제공, 오류 분석, 다국어 자동 설정</td></tr>
+    </table>
+    <div class="highlight-box">
+      <strong>수집하지 않는 정보:</strong> 이름, 이메일, 전화번호, 위치정보 등 개인 식별 정보는 수집하지 않습니다.
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>개인정보의 이용 목적</h2>
+    </div>
+    <ul class="clean-list">
+      <li>레시피 자동 추출 및 정리 기능 제공 (블로그·유튜브 링크 처리)</li>
+      <li>인분 환산, 요리 모드, 식단 달력 등 앱 핵심 기능 운영</li>
+      <li>서비스 오류 탐지 및 품질 개선</li>
+      <li>다국어 자동 표시 (기기 언어 설정 기반)</li>
+    </ul>
+    <p>수집한 정보는 명시된 목적 외에는 사용하지 않습니다.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>외부 링크 처리</h2>
+    </div>
+    <p>사용자가 입력한 블로그·유튜브 URL은 AI 레시피 추출을 위해 서버에서 일시적으로 처리됩니다. 처리 완료 후 URL 원문은 서버에 보관되지 않습니다.</p>
+    <div class="highlight-box">
+      <strong>지원 소스:</strong> 네이버 블로그, 티스토리, 유튜브 등 공개된 요리 콘텐츠. 로그인이 필요한 비공개 콘텐츠는 처리되지 않습니다.
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>개인정보 보유 및 파기</h2>
+    </div>
+    <table class="info-table">
+      <tr><th>보유 기간</th><td>서비스 이용 기간 동안 유지. 앱 삭제 시 기기 내 데이터 즉시 삭제.</td></tr>
+      <tr><th>서버 보관</th><td>별도 계정 시스템이 없으므로 서버에 개인 식별 정보를 보관하지 않습니다.</td></tr>
+      <tr><th>파기 방법</th><td>앱 내 '데이터 초기화' 기능 또는 앱 삭제를 통해 완전 파기.</td></tr>
+    </table>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>제3자 제공 및 위탁</h2>
+    </div>
+    <p>수집한 정보를 제3자에게 제공하거나 판매하지 않습니다. 다만, 아래 서비스가 앱 운영에 활용됩니다.</p>
+    <ul class="clean-list">
+      <li>Google Play Services — 앱 배포 및 업데이트</li>
+      <li>AI 텍스트 처리 API — 레시피 자동 추출 (입력된 URL의 콘텐츠만 처리, 개인정보 미포함)</li>
+      <li>Firebase Crashlytics (선택적) — 앱 오류 분석 (익명화된 기기 정보만 사용)</li>
+    </ul>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>아동 개인정보 보호</h2>
+    </div>
+    <p>쿡픽은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+    <p>만 14세 미만 아동이 서비스를 이용하는 경우 보호자의 동의 하에 사용해야 하며, 해당 사실을 인지한 경우 즉시 관련 데이터를 삭제 조치합니다.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2>이용자의 권리</h2>
+    </div>
+    <ul class="clean-list">
+      <li>앱 내 저장된 모든 레시피·식단 데이터는 언제든지 삭제 가능</li>
+      <li>앱 설정 → '데이터 초기화'로 전체 데이터 삭제 가능</li>
+      <li>개인정보 처리에 관한 문의 및 삭제 요청은 아래 연락처로 접수</li>
+    </ul>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h2>방침 변경 안내</h2>
+    </div>
+    <p>본 방침이 변경될 경우, 시행 7일 전 앱 내 공지사항 또는 스토어 업데이트 내용을 통해 사전 고지합니다. 중요한 변경 사항은 앱 실행 시 팝업으로 안내할 수 있습니다.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">9</div>
+      <h2>개인정보 보호 책임자 및 문의</h2>
+    </div>
+    <div class="contact-card">
+      <div class="contact-row">
+        <span class="contact-label">서비스명</span>
+        <span class="contact-value">쿡픽 (CookPick)</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">운영자</span>
+        <span class="contact-value">— (앱 개발자 성명 또는 사업자명 입력)</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">이메일</span>
+        <span class="contact-value">privacy@cookpick.app &nbsp;<em style="font-size:12px;color:var(--text-muted)">(실제 이메일로 교체)</em></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">응답 기한</span>
+        <span class="contact-value">문의 접수 후 영업일 기준 3일 이내</span>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p><span class="app-name">쿡픽</span> · 개인정보처리방침</p>
+  <p style="margin-top:6px;">© 2025 CookPick. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
